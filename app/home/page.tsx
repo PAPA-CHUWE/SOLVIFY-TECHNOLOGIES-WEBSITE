@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 
 
@@ -32,12 +32,12 @@ export default function Hero() {
             className='relative inline-block group lg:mt-0 mt-10'
           >
             <div className='absolute -inset-1 rounded-lg animate-rotate-ring'>
-              <div className='absolute inset-0 rounded-lg border-2 border-gradient bg-linear-to-r from-yellow-400 via-yellow-300 to-transparent opacity-50 group-hover:opacity-75 transition-all'></div>
+              <div className='absolute inset-0 rounded-lg border border-gradient bg-linear-to-r from-[#e3c53c] via-[#000066]  to-transparent opacity-50 group-hover:opacity-75 transition-all'></div>
             </div>
 
-            <div className='relative bg-[#e3c53c] group-hover:bg-yellow-500 text-[#000066] tracking-widest font-semibold px-8 py-3 rounded-lg transition-all duration-300 max-w-[25rem] text-sm flex items-center justify-center gap-2'>
+            <div className='relative bg-[#e3c53c] group-hover:bg-[#000066]/65 text-[#000066] hover:text-[#ffffff] tracking-widest font-semibold px-8 py-3 rounded-lg transition-all duration-300 max-w-100 text-sm flex items-center justify-center gap-2'>
               Explore
-              <ArrowRight
+              <ArrowUpRightIcon
                 className='transition-transform group-hover:translate-x-1'
                 size={20}
               />
