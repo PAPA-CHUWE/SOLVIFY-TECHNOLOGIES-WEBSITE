@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { MenuItems } from '../constants/menuItems'
 import { ArrowUpRightIcon, Menu as MenuIcon } from 'lucide-react'
 
+
 export default function NavBar () {
   const [scrolled, setScrolled] = useState(false)
 
@@ -24,6 +25,8 @@ export default function NavBar () {
           ? 'bg-[#000066]/40 backdrop-blur-lg shadow-lg border-b border-[#00ffff]/30'
           : 'bg-[#000066] shadow-none'
       }`}
+
+     
     >
       <div className='flex py-4 px-4 sm:px-10 min-h-[70px] items-center justify-between'>
         {/* Logo */}
