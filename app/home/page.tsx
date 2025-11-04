@@ -8,10 +8,8 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden lg:h-screen md:mt-0 mt-10 "
+      className="relative w-full overflow-hidden lg:h-screen md:mt-0 mt-10 h-full"
     >
-      {/* Background pattern + glass effect */}
-      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] bg-cover bg-center bg-no-repeat"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4">
