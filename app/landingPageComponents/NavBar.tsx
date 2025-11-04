@@ -3,11 +3,15 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger
+} from '@/components/ui/sheet'
 import Image from 'next/image'
 import { MenuItems } from '../constants/menuItems'
-import { ArrowUpRightIcon, Menu as MenuIcon } from 'lucide-react'
-
+import { ArrowUpRightIcon, Menu as MenuIcon, X } from 'lucide-react'
 
 export default function NavBar () {
   const [scrolled, setScrolled] = useState(false)
@@ -25,8 +29,6 @@ export default function NavBar () {
           ? 'bg-[#000066]/40 backdrop-blur-lg shadow-lg border-b border-[#00ffff]/30'
           : 'bg-[#000066] shadow-none'
       }`}
-
-     
     >
       <div className='flex py-4 px-4 sm:px-10 min-h-[70px] items-center justify-between'>
         {/* Logo */}
@@ -64,7 +66,6 @@ export default function NavBar () {
           ))}
         </nav>
 
-        {/* Auth Buttons */}
         <div className='hidden lg:flex space-x-4'>
           <a
             href='#contact'
@@ -95,13 +96,14 @@ export default function NavBar () {
               <MenuIcon className='w-6 h-6 text-background' />
             </Button>
           </SheetTrigger>
-          <SheetContent side='top' className='w-full h-full p-6'>
+          <SheetContent side='top'  className='w-full h-full p-6 bg-[#000066]'>
+     
             <div className='flex flex-col gap-4'>
               {MenuItems.map(item => (
                 <Link
                   key={item.label}
                   href={item.path}
-                  className='text-[#000066] font-medium hover:text-cyan-400'
+                  className=' font-medium hover:text-cyan-400 text-background'
                 >
                   {item.label}
                 </Link>
