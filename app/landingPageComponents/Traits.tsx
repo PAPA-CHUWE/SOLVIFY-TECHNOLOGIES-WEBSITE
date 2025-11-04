@@ -35,7 +35,7 @@ export default function Traits () {
         className='glass'
       >
         <BrainCircuit className='w-16 h-16 text-cyan-400' />
-        <p className='justify-center w-full tracking-widest flex items-center px-2'>
+        <p className='justify-center w-full tracking-widest flex items-center px-2 md:text-sm text-xs'>
           We harness Artificial Intelligence to automate processes, optimize
           decisions, and unlock new growth opportunities for your business.
         </p>
@@ -46,7 +46,7 @@ export default function Traits () {
         className='glass'
       >
         <Workflow className='w-16 h-16 text-cyan-400' />
-        <p className='justify-center w-full tracking-widest flex items-center px-2'>
+        <p className='justify-center w-full tracking-widest flex items-center px-2 md:text-sm text-xs'>
           Our agile teams build scalable and adaptive solutions that evolve with
           your business needs—fast, reliable, and future-proof.
         </p>
@@ -57,7 +57,7 @@ export default function Traits () {
         className='glass'
       >
         <Rocket className='w-16 h-16 text-cyan-400' />
-        <p className='justify-center w-full tracking-widest flex items-center px-2'>
+        <p className='justify-center w-full tracking-widest flex items-center px-2 md:text-sm text-xs'>
           We go beyond software—delivering measurable outcomes, boosting
           efficiency, and transforming organizations for long-term success.
         </p>
