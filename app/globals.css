@@ -120,7 +120,6 @@
     @apply bg-background text-foreground;
   }
 }
-
 .container {
   position: relative;
   display: flex;
@@ -175,21 +174,19 @@
   fill: #fff;
 }
 
-/* Small screens: straight column, no rotation/margin */
+/* Small screens: straight column, centered */
 @media (max-width: 640px) {
   .container {
     flex-direction: column;
     gap: 20px;
     height: auto;
-    width: 250px;
-    justify-content: center; /* centers vertically if container has height */
-    align-items: center;     /* centers horizontally */
-    text-align: center;   
+    width: 100%;            /* full width for centering */
+    align-items: center;     /* center the column */
   }
 
   .container .glass {
-    margin: 0;
-    transform: rotate(0deg);
+    margin: 0;               /* remove side margins */
+    transform: rotate(0deg); /* no rotation */
   }
 
   .container:hover .glass {
