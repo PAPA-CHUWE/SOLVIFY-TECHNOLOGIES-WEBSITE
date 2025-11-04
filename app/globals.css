@@ -182,6 +182,9 @@
     gap: 20px;
     height: auto;
     width: 250px;
+    justify-content: center; /* centers vertically if container has height */
+    align-items: center;     /* centers horizontally */
+    text-align: center;   
   }
 
   .container .glass {
