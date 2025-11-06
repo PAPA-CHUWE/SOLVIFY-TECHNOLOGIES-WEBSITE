@@ -11,6 +11,8 @@ import Link from 'next/link';
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
+// Add this near your other state hooks
+const [isOpen, setIsOpen] = useState(false);
 
   // Handle navbar background on scroll
   useEffect(() => {
@@ -95,9 +97,9 @@ export default function NavBar() {
         
 
         {/* Mobile Menu */}
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button size="icon-lg" variant="ghost" className="lg:hidden p-2 ring-2 ring-cyan-400">
+            <Button  onClick={() => setIsOpen(true)} size="icon-lg" variant="ghost" className="lg:hidden p-2 ring-2 ring-cyan-400">
               <MenuIcon className="w-6 h-6 text-cyan-500" />
             </Button>
           </SheetTrigger>
@@ -107,7 +109,10 @@ export default function NavBar() {
                 <Link
                 key={item.label}
                 href={item.path}
-                onClick={() => scrollToSection(item.path)}
+                onClick={() => {
+                  scrollToSection(item.path);
+                  setIsOpen(false); // ✅ closes the mobile nav
+                }}
                 className={`font-medium cursor-pointer transition-colors ${
                   activeSection === item.path
                     ? 'text-[#e3c53c] drop-shadow-[0_0_8px_#e3c53c]'
@@ -119,7 +124,10 @@ export default function NavBar() {
               ))}
 
               <Button
-                onClick={() => scrollToSection('#contact')}
+                 onClick={() => {
+                  scrollToSection('#contact');
+                  setIsOpen(false); // ✅ closes the mobile nav
+                }}
                 className="mt-6 w-full flex items-center justify-center gap-2 bg-[#e3c53c] text-[#000066] rounded-lg hover:bg-[#000066]/70 hover:text-white transition-all"
               >
                 Explore
