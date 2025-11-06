@@ -95,7 +95,7 @@ const IndustriesWeServed = () => {
             </SwiperSlide>
           ))}
 
-          {/* Navigation Arrows */}
+   
           <div className="swiper-button-next after:hidden">
             <ChevronRightIcon className="h-8 w-8 text-[#e3c53c]" />
           </div>

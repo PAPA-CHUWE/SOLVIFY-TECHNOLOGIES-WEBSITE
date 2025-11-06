@@ -101,7 +101,7 @@ export default function NavBar() {
               <MenuIcon className="w-6 h-6 text-cyan-500" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="top" className="w-full h-full p-6 bg-white">
+          <SheetContent side="top" className="w-full h-full p-6 bg-[#000066]">
             <div className="flex flex-col gap-4">
               {MenuItems.map((item) => (
                 <Link
