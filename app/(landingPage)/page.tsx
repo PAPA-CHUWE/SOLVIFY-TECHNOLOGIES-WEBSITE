@@ -6,6 +6,7 @@ import Traits from '../landingPageComponents/Traits'
 import Services from './services/page'
 import IndustriesWeServed from './industries/page'
 import Contact from './contact/page'
+import Footer from '../landingPageComponents/Footer'
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <Services/>
       <IndustriesWeServed/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }
