@@ -27,8 +27,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, onC
         </div>
       )}
 
-      <CardContent className="relative z-10 flex flex-col gap-4 h-52">
-        <h2 className="text-2xl font-semibold text-white">{title}</h2>
+      <CardContent className="relative z-10 flex flex-col gap-4 md:h-64 px-2 ">
+        <h2 className="md:text-2xl font-semibold text-white text-sm">{title}</h2>
         <p className="text-slate-200 text-sm leading-relaxed">{description}</p>
       </CardContent>
 
