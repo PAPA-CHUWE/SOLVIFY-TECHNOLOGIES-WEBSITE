@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 interface MenuItem {
   title: string;
@@ -72,6 +73,9 @@ const Footer: React.FC<FooterProps> = ({
     { text: 'Privacy', url: '#' },
   ],
 }) => {
+    const currentYear = new Date().getFullYear();
+    const resolvedCopyright =
+      copyright || `© ${currentYear} Solvify Technologies. All rights reserved.`;
   return (
     <footer className="bg-transparent py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,19 +92,19 @@ const Footer: React.FC<FooterProps> = ({
                 className="dark:invert"
               />
             </Link>
-            <p className="text-muted-foreground text-sm">{tagline}</p>
+            <p className="text-cyan-500 text-sm tracking-widest font-semibold">{tagline}</p>
           </div>
 
-          {/* Menu sections */}
+
           {menuItems.map((section, idx) => (
             <div key={idx}>
-              <h3 className="text-sm font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-sm font-semibold mb-4 flex justify-start gap-1 items-center tracking-widest uppercase text-[#e3c53c]"><ChevronRight/> {section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link, i) => (
                   <li key={i}>
                     <Link
                       href={link.url}
-                      className="text-muted-foreground hover:text-[#e3c53c] text-sm transition-colors"
+                      className="text-cyan-500 hover:text-[#e3c53c] text-sm transition-colors tracking-wider font-semibold"
                     >
                       {link.text}
                     </Link>
@@ -111,9 +115,8 @@ const Footer: React.FC<FooterProps> = ({
           ))}
         </div>
 
-        {/* Bottom Section */}
         <div className="mt-12 border-t pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>{copyright}</p>
+          <p className='font-semibold'>{resolvedCopyright}</p>
           <ul className="flex gap-4 mt-4 md:mt-0">
             {bottomLinks.map((link, i) => (
               <li key={i}>
