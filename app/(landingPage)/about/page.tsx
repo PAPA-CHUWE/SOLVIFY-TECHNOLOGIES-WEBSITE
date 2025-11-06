@@ -11,14 +11,14 @@ const About = () => {
   return (
     <section
       id='about'
-      className='w-full min-h-screen flex items-center justify-center px-4 py-16 bg-transparent'
+      className='w-screen min-h-[110vh] flex items-center justify-center overflow-x-hidden py-16'
     >
       <div className='w-full max-w-7xl space-y-10'>
         <div className='flex flex-col lg:flex-row justify-center gap-10 w-full'>
           {/* Image Section */}
           <div className='flex justify-center items-center lg:w-1/3'>
             <Image
-              src='/images/ArGlasses.png'
+              src='/images/front_view_woman_with_vr.png'
               alt='about'
               className='rounded-tl-full rounded-tr-full object-contain'
               width={650}
@@ -105,15 +105,15 @@ const About = () => {
             ].map((stat, idx) => (
               <Card
                 key={idx}
-                className={`rounded-3xl shadow-lg p-6 flex flex-col items-center justify-center hover:scale-105 transition-all max-w-44 ${
-                  idx === 1 ? 'ml-20' : ''
-                }`}
+                className={`rounded-3xl p-6 flex flex-col items-center justify-center hover:scale-105 transition-all max-w-44 
+        ${idx === 1 ? 'ml-20' : ''} 
+        bg-white/10 backdrop-blur-md border border-white/20 shadow-lg`}
               >
                 <CardContent className='flex flex-col items-center justify-center p-6'>
-                  <span className='text-4xl font-bold text-primary'>
+                  <span className='text-4xl font-bold text-background drop-shadow-md'>
                     {stat.number}
                   </span>
-                  <span className='text-muted-foreground mt-2 text-sm tracking-wide'>
+                  <span className='text-card mt-2 text-sm tracking-widest font-semibold'>
                     {stat.label}
                   </span>
                 </CardContent>
@@ -130,21 +130,21 @@ const About = () => {
               title: 'Innovation',
               description:
                 'Cutting-edge solutions with AI, ML, and IoT integration for future-ready businesses.',
-              icon: <Lightbulb size={30} />
+              icon: <Lightbulb size={60} />
             },
             {
               number: '02',
               title: 'Expertise',
               description:
                 'Skilled team with 3+ years experience delivering 120+ successful projects.',
-              icon: <BookOpenCheck size={30} />
+              icon: <BookOpenCheck size={60} />
             },
             {
               number: '03',
               title: 'Client Focus',
               description:
                 '30+ satisfied clients through customized solutions and dedicated support.',
-              icon: <Users size={30} />
+              icon: <Users size={60} />
             }
           ].map((card, idx) => (
             <CustCard
