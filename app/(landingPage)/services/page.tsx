@@ -28,15 +28,28 @@ const Services = () => {
           </p>
 
           {/* Action Buttons */}
-          <div className='flex gap-4 justify-center'>
-            <Button>Get a Quote</Button>
-            <Button variant='outline'>Learn More</Button>
+          <div className='flex justify-center '>
+            <div className='inline-flex rounded-full overflow-hidden shadow-lg gap-5'>
+              <Button
+                className='bg-transparent ring-1 ring-cyan-700 text-white font-semibold tracking-widest
+                 hover:bg-[#e3c53c] hover:text-[#000066] transition-colors duration-300'
+              >
+                Get a Quote
+              </Button>
+              <Button
+                variant='outline'
+                className='bg-[#e3c53c] ring-1 ring-[#000066] text-[#000066] font-semibold tracking-widest
+                 hover:bg-transparent hover:text-white transition-colors duration-300'
+              >
+                Learn More
+              </Button>
+            </div>
           </div>
         </div>
 
         {/* Service Cards */}
         <div className='flex items-center w-full justify-center'>
-          <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mt-6'>
+          <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-6 mt-6'>
             {ServiceList.map((service, idx) => (
               <ServiceCard
                 key={idx}

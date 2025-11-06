@@ -1,31 +1,23 @@
 export const MenuItems = [
     {
       label: "Home",
-      path: "/"                // Home page
+      path: "#home"                // Home page
     },
     {
       label: "About Us",
-      path: "/about"           // About page
+      path: "#about"           // About page
     },
     {
       label: "Services",
-      path: "/services"        // Services page
-    },
-    {
-      label: "Products",
-      path: "/products"        // Products page
+      path: "#services"        // Services page
     },
     {
       label: "Industries Served",
-      path: "/industries"      // Industries page
-    },
-    {
-      label: "Portfolio",
-      path: "/portfolio"       // Portfolio / Case studies page
+      path: "#industries"      // Industries page
     },
     {
       label: "Contact Us",
-      path: "/contact"         // Contact page
+      path: "#contact"         // Contact page
     }
   ];
   

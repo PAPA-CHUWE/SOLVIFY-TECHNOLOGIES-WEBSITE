@@ -16,11 +16,15 @@ const About = () => {
       <div className='w-full max-w-7xl space-y-10'>
         <div className='flex flex-col lg:flex-row justify-center gap-10 w-full'>
           {/* Image Section */}
-          <div className='flex justify-center items-center lg:w-1/3'>
+          <div className='relative flex justify-center items-center lg:w-1/3'>
+            {/* Cyan spotlight background */}
+            <div className='absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.35),transparent_70%)] blur-3xl opacity-80 animate-pulse'></div>
+
+            {/* The actual image with cyan drop shadow */}
             <Image
               src='/images/front_view_woman_with_vr.png'
               alt='about'
-              className='rounded-tl-full rounded-tr-full object-contain'
+              className='relative rounded-tl-full rounded-tr-full object-contain brightness-110 hover:brightness-125 transition-all duration-500 drop-shadow-[0_0_25px_rgba(0,255,255,0.6)]'
               width={650}
               height={550}
               priority
