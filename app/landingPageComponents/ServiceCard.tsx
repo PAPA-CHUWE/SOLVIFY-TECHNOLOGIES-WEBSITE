@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, onC
         </div>
       )}
 
-      <CardContent className="relative z-10 flex flex-col gap-4 h-48">
+      <CardContent className="relative z-10 flex flex-col gap-4 h-52">
         <h2 className="text-2xl font-semibold text-white">{title}</h2>
         <p className="text-slate-200 text-sm leading-relaxed">{description}</p>
       </CardContent>
@@ -37,7 +37,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, onC
         <Button
           variant="ghost"
           onClick={onClick}
-          className="flex items-center gap-2 text-cyan-400 font-semibold hover:text-[#e3c53c] transition-colors"
+          className="md:flex items-center gap-2 text-cyan-400 font-semibold hover:text-[#e3c53c] transition-colors hidden"
         >
           Read More
           <ArrowUpRight className="w-4 h-4" />
