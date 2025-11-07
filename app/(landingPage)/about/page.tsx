@@ -60,7 +60,7 @@ const About = () => {
             <Card className='bg-transparent text-primary-foreground rounded-3xl p-6 mt-6 space-y-6'>
               <CardContent className='flex flex-col lg:flex-row items-center gap-6 p-0'>
                 <Image
-                  src='/logos/Solvify.svg'
+                  src='/logos/solvify.svg'
                   alt='Solvify logo'
                   width={180}
                   height={120}
